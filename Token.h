@@ -11,6 +11,7 @@ struct Token {
         Operator,
         Function,
         Bracket,
+        None,
     };
     enum class Associativity {
         Right,
@@ -18,19 +19,18 @@ struct Token {
     };
     Type _type;
     int _args;
-    float(* _function)(std::vector<float>);
+    double(* _function)(std::vector<double>);
     int _priority;
     Associativity _associativity;
 };
 
 
-float add(std::vector<float>);
-float substract(std::vector<float>);
-float multiply(std::vector<float>);
-float divide(std::vector<float>);
-float raisePow(std::vector<float>);
-float unarySubstract(std::vector<float>);
-float takeSin(std::vector<float>);
-float takeCos(std::vector<float>);
+double add(std::vector<double>);
+double substract(std::vector<double>);
+double multiply(std::vector<double>);
+double divide(std::vector<double>);
+double raisePow(std::vector<double>);
+double takeSin(std::vector<double>);
+double takeCos(std::vector<double>);
 
 #endif //SHUNTINGYARDALGORITHM_TOKEN_H

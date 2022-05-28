@@ -9,6 +9,6 @@ std::vector<std::string> tokenise(const std::string& input);
 
 std::queue<Token> shuntingYard(const std::vector<std::string>& tokens);
 
-float calculate(const std::string& input);
+double calculate(const std::string& input);
 
 #endif //SHUNTINGYARDALGORITHM_SHUNTINGYARD_H
